@@ -219,11 +219,7 @@ let age = setInterval(function(){
  
  
  
- let lightsOut = setInterval(function turnOffLights() {
-    
 
- }, 1000)
- clearInterval(lightsOut)
 
 // Animation
 
