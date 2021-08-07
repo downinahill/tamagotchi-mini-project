@@ -18,9 +18,9 @@ class Tamagotchi {
 
     }
 
-    ageUp() {
+    ageUp =() => {
 
-        this.age++
+        this.age += 1
 
         
 
@@ -71,7 +71,7 @@ class Tamagotchi {
             document.querySelector("#boredom").innerHTML = `Boredom: ${this.boredom}`
             if (this.boredom >= 10) {
 
-                // alert("Your pet has died.")
+                alert("Your pet has died.")
                 
                 
 
@@ -139,7 +139,10 @@ const pet = new Tamagotchi(userInput)
 let hunger = setInterval(function(){
     
     pet.hunger++;
-
+    
+if (pet.hunger == 0) {
+    pet.hunger = 0
+}
     if (pet.hunger >= 10) {
         alert("Your pet has died.")
         document.querySelector("#pet").classList.add("rotate")
@@ -157,9 +160,17 @@ let hunger = setInterval(function(){
 let sleep = setInterval(function(){
 
     pet.sleepiness++;
+    if (pet.sleepiness > 5) {
+        document.querySelector("#shell").style.backgroundColor = "black"
+    } 
+    else if (pet.sleepiness < 5) {
+        document.querySelector("#shell").style.backgroundColor = "gray"
+    }
+
     let sleep = document.getElementById("sleepiness");
     if (pet.sleepiness >= 10) {
-        document.querySelector("#shell").appendChild("<p>Your pet has died</p>");
+        alert("Your pet has died.")
+
         document.querySelector("#pet").classList.add("rotate")
 
         endGame()
@@ -168,7 +179,7 @@ let sleep = setInterval(function(){
 
     sleep.innerHTML = `Sleep: ${pet.sleepiness}`;
 
-}, 4000);
+}, 2000);
 
  
 
@@ -177,8 +188,8 @@ let boredom = setInterval(function(){
    pet.boredom++;
    
    if (pet.boredom >= 10) {
-    document.querySelector("#shell").appendChild("<p>Your pet has died</p>");
-
+    
+    alert("Your pet has died.")
     document.querySelector("#pet").classList.add("rotate")
     endGame()
 }
@@ -186,7 +197,7 @@ let boredom = setInterval(function(){
 
    boredom.innerHTML = `Boredom: ${pet.boredom}`
 
-}, 3000);
+}, 2000);
 
 
 
@@ -196,12 +207,13 @@ let age = setInterval(function(){
     pet.age++;
     if (pet.age == 5) {
         alert("You win!")
+        endGame()
  }
     let age = document.getElementById("age");
  
     age.innerHTML = `Age: ${pet.age}`
  
- }, 300000);
+ }, 5000);
 
  
  

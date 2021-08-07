@@ -6,11 +6,6 @@ body {
 }
 
 
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 h1 {
     text-align: center;
@@ -21,18 +16,13 @@ h1 {
 }
 
 #pet {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 2s;
-    animation: example 5s linear 2s infinite alternate;
+    float: center;
+    
     
 }
 
 img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     padding-left: 0em;
     max-width: 100px;
@@ -61,7 +51,8 @@ img {
 
 #shell {
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    flex-direction: column;
     background-color: gray;
     height: 500px;
     width: 500px;
@@ -73,18 +64,15 @@ img {
   ​
   
   ​
-#buttons {
+.button {
     
     align-items: center;
     margin: 0 auto;
-    
-}
-  ​
-  #feed {
     height: 70px;
     width: 70px;
     background-color: darkblue;
     margin-top: 30px;
     list-style: none;
     border-radius: 30px;
-  }
+    
+}
