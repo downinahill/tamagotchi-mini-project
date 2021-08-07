@@ -1,33 +1,57 @@
 
-/* 
+
+
 body {
+    min-height: 100vh;
+}
+
+
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
-    padding-right: 35px;
-} */
+}
 
 h1 {
     text-align: center;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+#pet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 2s;
+    animation: example 5s linear 2s infinite alternate;
+    
 }
 
 img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding-left: 0em;
     max-width: 100px;
     height: 200px;
-    position: absolute;
-    background-color: gray;
+    float: center;
+    
+    
     
 }
 
 
-.container {
-    width: auto;
-    margin: 0 auto;
+#buttoncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    flex-direction: row;
+    
+    border-radius: 50%;
 }
 
 
@@ -35,53 +59,28 @@ img {
 
 
 
-
-#shell{
+#shell {
+    display: flex;
+    justify-content: center;
     background-color: gray;
     height: 500px;
     width: 500px;
     margin: 0 auto;
     border-radius: 100px;
     padding-top: 50px;
+    color: white;
   }
   ​
-  #screen{
-    background-color: lightblue;
-    height: 350px;
-    width: 350px;
+  
+  ​
+#buttons {
+    
+    align-items: center;
     margin: 0 auto;
-    border-radius: 50px;
-  }
-  ​
-#buttonContainer {
-    display: flex;
-      justify-content: center;
-      flex-direction: row;
+    
 }
-
   ​
   #feed {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-    
-  }
-  ​
-  #play {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    
-  }
-
-  #sleep {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    
-  }
-  ​
-  .button {
     height: 70px;
     width: 70px;
     background-color: darkblue;
